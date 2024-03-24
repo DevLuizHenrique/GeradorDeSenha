@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags para definição de charset, viewport e palavras-chave -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de senhas, gerador password">
+    <!-- Título da página -->
+    <title>Gerador de Senha</title>
+
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Logo do Gerador de Senha -->
+    <img class="logo" src="./assets/logo.png" alt="Gerador de senha logo" />
+
+    <!-- Container principal para inputs e botões -->
+    <main class="container-input">
+        <!-- Slider para selecionar o tamanho da senha -->
+        <span>Tamanho <span id="valor"></span> caracteres</span>
+        <input id="slider" class="slider" type="range" min="5" max="25" value="15" />
+        
+        <!-- Botão para gerar a senha -->
+        <button id="button" class="button-cta" onclick="generatePassword()">Gerar senha</button>
+    </main>
+
+    <!-- Container para exibir a senha gerada -->
+    <div id="container-password" onclick="copyPassword(novaSenha)" class="container-password hide">
+        <!-- Título para a senha gerada -->
+        <span class="title">Senha gerada:</span>
+        <!-- Campo para exibir a senha -->
+        <span id="password" class="password"></span>
+        <!-- Mensagem para copiar a senha -->
+        <span class="tooltip">Clique na senha para copiar 👆</span>
+    </div>
+    
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
